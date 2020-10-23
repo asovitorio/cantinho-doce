@@ -1,0 +1,310 @@
+    @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        font-family: 'Architects Daughter', cursive;
+    }
+    /* ######### INICIO DO ESTILO TELA LADING PAGE ############   */
+    
+    .ladingpage-back {
+        background: url('../images/fundo.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .ladingpage-card {
+        width: 100vw;
+        height: 120px;
+        background-color: #7e0032cc;
+        width: 100vw;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .ladingpage-card img {
+        width: 600px;
+        position: absolute;
+    }
+    
+    .ladingpage-back a {
+        text-decoration: none;
+        font-size: 45px;
+        font-weight: bold;
+        color: #fff2cc;
+        background-color: #AC526C;
+        width: 400px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        box-shadow: 6px 0px 25px rgba(0, 0, 0, 0.767);
+        position: fixed;
+        bottom: 20px;
+    }
+    
+    .ladingpage-back a:hover {
+        background-color: #7e0032cc;
+    }
+    /* FIM DA LADING PAGE */
+    /* ######### INICIO DO ESTILO TELA HOME ############   */
+    
+    .home-body {
+        background: url('../images/fundo.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .home-back {
+        background: url('../images/fundo.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 100%;
+        padding-bottom: 100px;
+    }
+    
+    .cards-container {
+        margin: 0 auto;
+    }
+    
+    .logo-home {
+        width: 120px;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: -13px;
+    }
+    
+    .menu {
+        background-color: #AC526C;
+        margin-bottom: 30px;
+        box-shadow: 0px 6px 18px #000000a9;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .navbar-toggler {
+        background-color: #fff2cc;
+    }
+    
+    .home-back .card-header {
+        /* background: url('/images/xadrez\ 3.jpg'); */
+        background-color: #fff2cc;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        height: 130px;
+        border: 3px solid #AC526C;
+    }
+    
+    .home-back .card-body {
+        background-color: #fff2cc;
+        border-bottom: 3px solid #AC526C;
+        border-left: 3px solid #AC526C;
+        border-right: 3px solid #AC526C;
+    }
+    
+    .home-back .card-header img {
+        width: 130px;
+        height: 100px;
+        background-color: white;
+        border-radius: 100%;
+        border: 2px solid #AC526C;
+        position: absolute;
+    }
+    
+    .home-back .card {
+        margin-top: 30px;
+        box-shadow: 0 0 0 12px #fff2cc;
+    }
+    
+    .nav-link {
+        color: #fff2cc;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bolder;
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+        margin: 0;
+    }
+    
+    .nav-link h6 {
+        border-left: 8px solid #fff2cc;
+        width: 150px;
+        text-align: left;
+    }
+    
+    .nav-link h6 i {
+        margin-left: 5px;
+    }
+    /* fim da home */
+    /* ######### INICIO DO ESTILO TELA LOGIN ############   */
+    
+    .login-back {
+        background: url('../images/fundo.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 100vh;
+        padding-bottom: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    
+    .login-back .logo-login {
+        position: absolute;
+    }
+    
+    .login-back .logo-login img {}
+    
+    .login-back .login-card img {
+        width: 40px;
+    }
+    
+    .login-back .card {
+        z-index: 10;
+        background-color: #fff2cc98;
+        width: 50rem;
+        height: 600px;
+        border-radius: 20%;
+        border: 3px solid #ac526ca9;
+    }
+    
+    .login-back .login-foms {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    
+    .login-back .login-foms h1 {
+        font-weight: bold;
+        color: #ac526cec;
+        font-size: 5rem;
+    }
+    
+    .login-back {
+        background-color: #AC526C;
+    }
+    
+    .login-back .login-label {
+        background-color: #ac526c;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-radius: 20px;
+        width: 100px;
+        text-align: center;
+    }
+    
+    .login-back .form-group {
+        width: 100%;
+    }
+    
+    .login-back .form-group input {
+        margin-bottom: 30px;
+        border: 2px solid #AC526C;
+        height: 90px;
+        background-color: rgba(255, 255, 255, 0.945);
+        font-size: 3rem;
+        color: #AC526C;
+        text-align: center;
+    }
+    
+    .login-back button {
+        width: 300px;
+        background-color: #ac526c;
+        border: 3px solid #ac526c;
+        font-size: 20px;
+        border-radius: 30px;
+        color: #fff2cc;
+        transition: background-color 0.6s linear;
+        margin-top: 40px;
+    }
+    
+    .login-back button:hover {
+        background-color: #bd7086;
+        border: 3px solid #ac526c;
+        color: #fff2cc;
+    }
+    /* fim Login */
+    /* ######### INICIO DO ESTILO TELA SYSTEM ############   */
+    
+    .sytem-back {
+        background: url('../images/fundo.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 100%;
+        padding-bottom: 100px;
+    }
+    
+    .table {
+        background-color: #fff2ccd5;
+    }
+    
+    .line-head {
+        background-color: #AC526C;
+        color: white;
+    }
+    
+    .line-table {
+        text-align: center;
+    }
+    
+    .btn-edit,
+    .btn-delete {
+        background-color: rgba(255, 255, 255, 0);
+        border: none;
+    }
+    
+    .btn-edit {
+        color: blue;
+    }
+    
+    .btn-delete {
+        color: red;
+    }
+    
+    .image-table {
+        width: 80px;
+        height: 60px;
+        background-color: white;
+        border-radius: 50%;
+        border: 2px solid #AC526C;
+    }
+    
+    .btn-add {
+        text-align: right;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    
+    .btn-add button {
+        border-radius: 50%;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.616);
+        margin: 3px;
+        display: flex;
+        align-items: center;
+    }
