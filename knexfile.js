@@ -3,12 +3,19 @@
 module.exports = {
 
     development: {
-        client: 'sqlite3',
+        client: 'mysql',
         connection: {
-            host: '127.0.0.1',
-            user: 'your_database_user',
-            password: 'your_database_password',
+            host: 'localhost',
+            user: 'root',
+            password: 'admin',
             database: 'cantinho_doce'
+        },
+        migrations: {
+            tableName: 'migrations',
+            directory: `${__dirname}/database/migrations`
+        },
+        seeds: {
+            directory: `${__dirname}/database/seeds`
         }
     },
 
