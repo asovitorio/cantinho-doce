@@ -9,35 +9,35 @@
           </button>
             </div>
             <div class="modal-body">
-                <form>
+                <form method="POST" action="/system" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="formGroupExampleInput">Descrição</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Digite Descrição do Produto">
+                        <input type="text" name="descricao" class="form-control" id="formGroupExampleInput" placeholder="Digite Descrição do Produto">
                     </div>
                     <div class="form-group">
                         <label for="formGroupExampleInput2">Valor</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Digite o Valor">
+                        <input type="text" name="valor" class="form-control" id="formGroupExampleInput2" placeholder="Digite o Valor">
                     </div>
                     <div class="form-group">
                         <label for="formGroupExampleInput2">Categoria</label>
-                        <select class="form-control">
+                        <select class="form-control" name="categoria">
                             <option>Escolha uma opção</option>
-                            <option>Doces</option>
-                            <option>Salgados</option>
-                            <option>Bebidas</option>
-                            <option>Gelados</option>
+                            <option value="Doces">Doces</option>
+                            <option value="Salagadinhos">Salgados</option>
+                            <option value="Bebidas">Bebidas</option>
+                            <option value="Sorvete/Geladinho">Sorvete/Geladinho</option>
                           </select>
 
                     </div>
                     <div class="form-group">
                         <label for="formGroupExampleInput2">Imagem</label>
-                        <input type="file" class="form-control" id="formGroupExampleInput2" placeholder="Insira uma imagem">
+                        <input type="file" name="image" class="form-control" id="formGroupExampleInput2" placeholder="Insira uma imagem">
                     </div>
 
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-success"><i class='fas fa-save' style='font-size:24px'></i> Gravar</button>
+                <button type="submit" class="btn btn-success"><i class='fas fa-save' style='font-size:24px'></i> Gravar</button>
             </div>
             </form>
         </div>

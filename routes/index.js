@@ -6,6 +6,6 @@ const indexController = require('../controllers/indexController')
 router.get('/', indexController.index);
 router.get('/home', indexController.home);
 router.get('/login', indexController.login);
-router.post('/system', indexController.system);
+router.post('/login', indexController.system);
 
 module.exports = router;

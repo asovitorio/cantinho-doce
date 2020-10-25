@@ -13,16 +13,21 @@
     <div class="login-back">
         <div class="logo-login"><img src="/images/logo_dna_antonia2.png" alt=""></div>
         <div class="card">
-            <form class="container login-foms" method="POST" action="/system">
+            <form class="container login-foms" method="POST" action="/login">
                 <h1>Login</h1>
+                <% if( erro != undefined){%>
+                    <div class="alert alert-danger" style="position: absolute; font-size: 30px;" role="alert">
+                      Voce digitou <b><%=erro%></b> errado 
+                      </div>
+                <% } %>     
                 <div class="form-group">
                     <label class="login-label " for="exampleInputEmail1 ">Login</label>
-                    <input type="text" class="form-control " id="exampleInputEmail1 " aria-describedby="emailHelp ">
+                    <input type="text" name="usuario" class="form-control " id="exampleInputEmail1 " aria-describedby="emailHelp ">
 
                 </div>
                 <div class="form-group ">
                     <label class="login-label " for="exampleInputPassword1 ">Senha</label>
-                    <input type="password" class="form-control " id="exampleInputPassword1 ">
+                    <input type="password" name="senha" class="form-control " id="exampleInputPassword1 ">
                 </div>
                 <button type="submit " class="btn">Entrar <i class='fas fa-door-open' style='font-size:24px'></i></button>
             </form>
