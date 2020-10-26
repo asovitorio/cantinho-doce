@@ -25,7 +25,7 @@
                             <option value="Doces">Doces</option>
                             <option value="Salagadinhos">Salgados</option>
                             <option value="Bebidas">Bebidas</option>
-                            <option value="Sorvete/Geladinho">Sorvete/Geladinho</option>
+                            <option value="Sorvete/Geladinho">Gelados</option>
                           </select>
 
                     </div>
@@ -43,8 +43,7 @@
         </div>
     </div>
 </div>
-<!-- Modal deletar -->
-<!-- Modal Add -->
+<!-- Modal Atualizar -->
 <div class="modal fade" id="atualizar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -55,35 +54,35 @@
           </button>
             </div>
             <div class="modal-body">
-                <form>
+                <form id="form-update" method="POST" action="/system?_method=PUT" enctype="multipart/form-data">
+                    <input type="hidden" id="id-input-update" name="id">
                     <div class="form-group">
                         <label for="formGroupExampleInput">Descrição</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Digite Descrição do Produto">
+                        <input type="text" name="descricao" class="form-control" id="descricao-input-update" placeholder="Digite Descrição do Produto">
                     </div>
                     <div class="form-group">
                         <label for="formGroupExampleInput2">Valor</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Digite o Valor">
+                        <input type="text" name="valor" class="form-control" id="valor-input-update" placeholder="Digite o Valor">
                     </div>
                     <div class="form-group">
                         <label for="formGroupExampleInput2">Categoria</label>
-                        <select class="form-control">
+                        <select class="form-control" id="categoria-input-update" name="categoria">
                             <option>Escolha uma opção</option>
-                            <option>Doces</option>
-                            <option>Salgados</option>
-                            <option>Bebidas</option>
-                            <option>Gelados</option>
+                            <option value="Doces">Doces</option>
+                            <option value="Salagadinhos">Salgados</option>
+                            <option value="Bebidas">Bebidas</option>
+                            <option value="Sorvete/Geladinho">Gelados</option>
                           </select>
-
                     </div>
                     <div class="form-group">
                         <label for="formGroupExampleInput2">Imagem</label>
-                        <input type="file" class="form-control" id="formGroupExampleInput2" placeholder="Insira uma imagem">
+                        <input type="file" name="image" class="form-control" id="image-input-update" placeholder="Insira uma imagem">
                     </div>
-
+                    <input type="hidden" name="imageProduto" id="image-produto">
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary"><i class='fas fa-sync-alt' style='font-size:24px'></i> Atualizar</button>
+                <button type="submit" id="btn-update" class="btn btn-primary"><i class='fas fa-sync-alt' style='font-size:24px'></i> Atualizar</button>
                 </form>
             </div>
         </div>
@@ -104,8 +103,9 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <form id="form-delete" action="">
-                    <button type="button" class="btn btn-danger"> <i class='far fa-trash-alt'style='font-size:24px'></i> Deletar</button>
+                <form id="form-delete" method="POST" action="/system?_method=DELETE">
+                    <input type="hidden" id="id-input-delete" name="id">
+                    <button type="submit" class="btn btn-danger"> <i class='far fa-trash-alt'style='font-size:24px'></i> Deletar</button>
 
                 </form>
             </div>

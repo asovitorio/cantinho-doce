@@ -27,11 +27,26 @@ const systemController = {
             return res.status(400).json(error)
         }
     },
-    update: (req, res) => {
+    update: async(req, res) => {
+        const {
+            id,
+            descricao,
+            categoria,
+            imageProduto,
+            valor
+        } = req.body
+        const image = req.files[0] != undefined ? req.files[0].filename : imageProduto
+        const produto = { descricao, categoria, valor, image }
+        try {
+            await connection('produtos').where('id', id).update(produto)
+            res.redirect('/system')
+        } catch (error) {
+            return res.status(400).json(error)
+        }
 
     },
     delete: async(req, res) => {
-        const { id } = req.params
+        const { id } = req.body
         try {
             await connection('produtos').where('id', id).del()
             res.redirect('/system')

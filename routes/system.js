@@ -17,7 +17,8 @@ var upload = multer({ storage: storage })
 
 router.get('/', systemController.index)
 router.post('/', upload.any(), systemController.create)
-router.post('/:id', upload.any(), systemController.delete)
+router.put('/', upload.any(), systemController.update)
+router.delete('/', upload.any(), systemController.delete)
 
 
 module.exports = router

@@ -308,3 +308,9 @@
         display: flex;
         align-items: center;
     }
+    
+    .form-group input,
+    select,
+    option {
+        font-size: 20px;
+    }
