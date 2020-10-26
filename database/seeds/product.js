@@ -3,17 +3,16 @@ exports.seed = function(knex) {
     return knex('produtos').del()
         .then(function() {
             // Inserts seed entries
-            return knex('produtos').insert([
-                {
+            return knex('produtos').insert([{
                     descricao: 'Chiclete push tuti-fruti',
-                    categoria: 'doce',
-                    valor: '4,50',
+                    categoria: 'Doce',
+                    valor: '0,50',
 
                 },
                 {
                     descricao: 'Chiclete push hortelã',
-                    categoria: 'doce',
-                    valor: '4,50',
+                    categoria: 'Doce',
+                    valor: '0,50',
 
                 },
 
