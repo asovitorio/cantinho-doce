@@ -165,13 +165,12 @@
         justify-content: center;
         align-items: center;
         position: relative;
+        flex-direction: column;
     }
     
     .login-back .logo-login {
         position: absolute;
     }
-    
-    .login-back .logo-login img {}
     
     .login-back .login-card img {
         width: 40px;
@@ -181,9 +180,10 @@
         z-index: 10;
         background-color: #fff2cc98;
         width: 50rem;
-        height: 600px;
+        height: 700px;
         border-radius: 20%;
         border: 3px solid #ac526ca9;
+        margin-top: 50px;
     }
     
     .login-back .login-foms {
@@ -194,10 +194,25 @@
         height: 100%;
     }
     
-    .login-back .login-foms h1 {
+    .login-back h1 {
         font-weight: bold;
         color: #ac526cec;
-        font-size: 5rem;
+        font-size: 4rem;
+        position: absolute;
+        top: -50px;
+        z-index: 2000;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .login-back h1 span {
+        background-color: #ac526c;
+        color: white;
+        width: 370px;
+        height: 90px;
+        text-align: center;
+        border-radius: 35px;
     }
     
     .login-back {
@@ -214,6 +229,7 @@
         border-radius: 20px;
         width: 100px;
         text-align: center;
+        margin-top: 40px;
     }
     
     .login-back .form-group {
@@ -221,10 +237,10 @@
     }
     
     .login-back .form-group input {
-        margin-bottom: 30px;
+        margin-bottom: 50px;
         border: 2px solid #AC526C;
         height: 90px;
-        background-color: rgba(255, 255, 255, 0.945);
+        background-color: rgba(255, 255, 255, 0.712);
         font-size: 3rem;
         color: #AC526C;
         text-align: center;
@@ -234,11 +250,11 @@
         width: 300px;
         background-color: #ac526c;
         border: 3px solid #ac526c;
-        font-size: 20px;
+        font-size: 30px;
         border-radius: 30px;
         color: #fff2cc;
         transition: background-color 0.6s linear;
-        margin-top: 40px;
+        margin-top: 52px;
     }
     
     .login-back button:hover {
@@ -247,7 +263,7 @@
         color: #fff2cc;
     }
     /* fim Login */
-    /* ######### INICIO DO ESTILO TELA SYSTEM ############   */
+    /* ######### INICIO DO ESTILO TELA SYSTEM ############*/
     
     .sytem-back {
         background: url('../images/fundo.png');
