@@ -15,10 +15,10 @@ const auth = require('../middleware/auth')
 
 // var upload = multer({ storage: storage })
 
-router.get('/', systemController.index)
-router.post('/', systemController.create)
-router.put('/', systemController.update)
-router.delete('/', systemController.delete)
+router.get('/', auth.session, systemController.index)
+router.post('/', auth.session, systemController.create)
+router.put('/', auth.session, systemController.update)
+router.delete('/', auth.session, systemController.delete)
 
 
 module.exports = router
