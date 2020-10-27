@@ -104,9 +104,10 @@ dist
 # TernJS port file
 .tern-port
 #images
+
 # .public/images/uploads/*.jpg
 # .public/images/uploads/*.png
-# !public/images/uploads/image_padrao.jpg
+# !public/images/uploads/image_padrao.jpgxxx
 
 
 
