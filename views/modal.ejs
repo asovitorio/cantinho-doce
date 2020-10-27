@@ -9,7 +9,7 @@
           </button>
             </div>
             <div class="modal-body">
-                <form method="POST" action="/system" enctype="multipart/form-data">
+                <form method="POST" action="/system">
                     <div class="form-group">
                         <label for="formGroupExampleInput">Descrição</label>
                         <input type="text" name="descricao" class="form-control" id="formGroupExampleInput" placeholder="Digite Descrição do Produto">
@@ -23,16 +23,16 @@
                         <select class="form-control" name="categoria">
                             <option>Escolha uma opção</option>
                             <option value="Doces">Doces</option>
-                            <option value="Salagadinhos">Salgados</option>
+                            <option value="Salgadinhos">Salgadinhos</option>
                             <option value="Bebidas">Bebidas</option>
-                            <option value="Sorvete/Geladinho">Gelados</option>
+                            <option value="Gelados">Gelados</option>
                           </select>
 
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label for="formGroupExampleInput2">Imagem</label>
                         <input type="file" name="image" class="form-control" id="formGroupExampleInput2" placeholder="Insira uma imagem">
-                    </div>
+                    </div> -->
 
             </div>
             <div class="modal-footer">
@@ -54,7 +54,7 @@
           </button>
             </div>
             <div class="modal-body">
-                <form id="form-update" method="POST" action="/system?_method=PUT" enctype="multipart/form-data">
+                <form id="form-update" method="POST" action="/system?_method=PUT">
                     <input type="hidden" id="id-input-update" name="id">
                     <div class="form-group">
                         <label for="formGroupExampleInput">Descrição</label>
@@ -69,16 +69,16 @@
                         <select class="form-control" id="categoria-input-update" name="categoria">
                             <option>Escolha uma opção</option>
                             <option value="Doces">Doces</option>
-                            <option value="Salagadinhos">Salgados</option>
+                            <option value="Salgadinhos">Salgados</option>
                             <option value="Bebidas">Bebidas</option>
-                            <option value="Sorvete/Geladinho">Gelados</option>
+                            <option value="Gelados">Gelados</option>
                           </select>
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label for="formGroupExampleInput2">Imagem</label>
                         <input type="file" name="image" class="form-control" id="image-input-update" placeholder="Insira uma imagem">
-                    </div>
-                    <input type="hidden" name="imageProduto" id="image-produto">
+                    </div> -->
+                    <!-- <input type="hidden" name="imageProduto" id="image-produto"> -->
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

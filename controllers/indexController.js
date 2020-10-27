@@ -1,6 +1,7 @@
  const Knex = require('knex')
  const connection = require('../database/connection')
- var bcrypt = require('bcryptjs');
+ const bcrypt = require('bcryptjs');
+
  const indexController = {
      index: (req, res) => {
 
@@ -8,9 +9,8 @@
      },
      home: async(req, res) => {
          try {
-             const produtos = await connection('produtos').orderBy('categoria', 'asc')
+             const produtos = await connection('produtos').orderBy([{ column: 'categoria' }, { column: 'descricao', order: 'asc' }])
              const [data] = produtos
-             console.log(produtos)
              return res.render('home', { produtos: produtos })
 
          } catch (error) {
@@ -34,6 +34,7 @@
              console.log(result[0].senha)
              return res.render('login', { erro: "senha" })
          }
+         req.session.usuarioLogado = true
 
          return res.redirect('/system')
 

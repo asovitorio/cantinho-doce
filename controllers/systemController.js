@@ -4,16 +4,17 @@ const systemController = {
 
     index: async(req, res) => {
         try {
-            const produtos = await connection('produtos').orderBy('categoria', 'asc')
-            return res.render('system', { produtos })
+            const produtos = await connection('produtos').orderBy([{ column: 'categoria' }, { column: 'descricao', order: 'asc' }])
+            console.log(req.session.user)
+            return res.render('system', { produtos, usuario: req.session.user })
         } catch (error) {
             return res.status(400).json(error)
         }
     },
     create: async(req, res) => {
         // console.log(req.files.filename)
-        const image = req.files[0] != undefined ? req.files[0].filename : 'image_padrao.jpg'
         const { descricao, valor, categoria } = req.body
+        const image = categoria + '.png'
         const produto = {
             descricao,
             categoria,
@@ -32,11 +33,17 @@ const systemController = {
             id,
             descricao,
             categoria,
-            imageProduto,
             valor
         } = req.body
-        const image = req.files[0] != undefined ? req.files[0].filename : imageProduto
-        const produto = { descricao, categoria, valor, image }
+
+        const image = categoria + '.png'
+        const produto = {
+            descricao,
+            categoria,
+            image,
+            valor
+        }
+
         try {
             await connection('produtos').where('id', id).update(produto)
             res.redirect('/system')
