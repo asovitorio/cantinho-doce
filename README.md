@@ -2,7 +2,7 @@
 
 ## Sistema de cardapio de doceria
 
-Diante do Senário de pademia muitas são as dificuldades finaceiras da população, principalmente das mais carentes nas partes periféricas da nossa metrópole, onde vamos conhecer a história da **dona Antônia** uma Sra. Simples, viúva, analfabeta e de uma simpatia contagiante, como muitos idosos com essas característica necessitam de cuidados com medicações bem como suas necessidades essenciais para sua subsistência.
+Diante do cenário de pademia muitas são as dificuldades finaceiras da população, principalmente das mais carentes nas partes periféricas da nossa metrópole, onde vamos conhecer a história da **dona Antônia** uma Sra. Simples, viúva, analfabeta e de uma simpatia contagiante, como muitos idosos com essas característica necessitam de cuidados com medicações bem como suas necessidades essenciais para sua subsistência.
 Diante do exposto a dona Antônia decidiu vender doces em sua residência para complementar sua renda e por fim conseguir garantir suas necessidades básicas.
 
 ### Problemáticas
